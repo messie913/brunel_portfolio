@@ -1,0 +1,52 @@
+// Fonts var
+@font-face {
+  font-family: "Inter";
+  src: url(./../assets/fonts/Inter/static/Inter_24pt-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(./../assets/fonts/Poppins/Poppins-Regular.ttf);
+}
+// Color var
+$blackEbony: #0d1825;
+$greenMenthe: #72c7ba;
+$menthe: #72c7ba35;
+$green: #16b84e;
+$blue: #5b6fa726;
+
+// Page default setup
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style-type: none;
+}
+
+body {
+  background-color: $blackEbony;
+  color: whitesmoke;
+  font-family: "Inter", sans-serif;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins", "Inter", sans-serif;
+}
+// Components
+.cta {
+  padding: 15px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  background-color: $greenMenthe;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+.neutrale {
+  color: whitesmoke;
+  background-color: transparent;
+  border: 1px solid whitesmoke;
+}
