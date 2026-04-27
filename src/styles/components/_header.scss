@@ -1,9 +1,14 @@
 .mainHeader {
+  max-width: 1700px;
+  margin: auto;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0 70px;
+  padding: 0 20px;
+  @media (width>1400px) {
+    padding: 0 70px;
+  }
 
   .logo {
     width: 130px;
@@ -20,9 +25,10 @@
     gap: 1.5rem;
     .nav-active {
       color: white;
-      background-color: $green;
+      background-color: $blue;
       padding: 10px;
       border-radius: 20px;
+      color: $greenMenthe;
     }
     a {
       color: whitesmoke;
@@ -33,7 +39,7 @@
       transition: 0.3s;
       position: relative;
       @media (width > 1400px) {
-        font-size: 1rem;
+        font-size: 1.2rem;
       }
       &:hover {
         color: white;

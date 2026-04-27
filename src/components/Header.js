@@ -30,7 +30,10 @@ const Header = () => {
           <li>Ils parlent de moi</li>
         </NavLink>
         <NavLink>
-          <li>Youtube</li>
+          <li>
+            Youtube{" "}
+            <i className="fa-brands fa-youtube" style={{ color: "red" }}></i>
+          </li>
         </NavLink>
         <NavLink>
           <li>Contact</li>

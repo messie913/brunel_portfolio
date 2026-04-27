@@ -1,0 +1,94 @@
+.projectContainer {
+  max-width: 1400px;
+  margin: 10px auto;
+  padding: 0 70px;
+  h2 {
+    color: $greenMenthe;
+    letter-spacing: 1px;
+    font-size: 1rem;
+  }
+  .allProject {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+    button {
+      padding: 8px;
+    }
+  }
+  .cardContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    .card {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 200px 1fr;
+      border-radius: 5px;
+      border: 1px solid rgba(91, 111, 167, 0.482);
+      background-color: rgba(91, 111, 167, 0.1058823529);
+      .card-head.moviestuff {
+        background-image: url(./../../assets/Images/IMG_1319_webMoviestuff.png);
+      }
+      .card-head.marmitepartage {
+        background-image: url(./../../assets/Images/IMG_1319_webMarmitte.png);
+      }
+      .card-head.ariva {
+        background-image: url(./../../assets/Images/IMG_1319_webAriva.png);
+      }
+      .card-head.movie {
+        background-image: url(./../../assets/Images/movieStuff.png);
+      }
+      .card-head {
+        background: center/cover;
+        border-radius: 5px 5px 0 0;
+      }
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        gap: 0.4rem;
+        margin-bottom: 10px;
+        padding: 5px 10px;
+        h3 {
+          font-size: 1rem;
+        }
+        p {
+          letter-spacing: 1px;
+          line-height: 18px;
+          font-size: 0.9rem;
+        }
+        .technosUsed {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-around;
+          gap: 10px;
+          .techno {
+            background-color: rgba(91, 111, 167, 0.297);
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 0.7rem;
+          }
+        }
+      }
+      .card-footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        a {
+          color: $greenMenthe;
+          text-decoration: none;
+        }
+        i {
+          color: $greenMenthe;
+        }
+      }
+    }
+  }
+}

@@ -18,19 +18,19 @@ const Hero = () => {
         </p>
         <div className="ctaContainer">
           <button className="cta">
-            Voir mes projets <i class="fa-solid fa-arrow-right"></i>
+            Voir mes projets <i className="fa-solid fa-arrow-right"></i>
           </button>
           <button className="cta neutrale">
-            Télécharger mon CV <i class="fa-solid fa-download"></i>
+            Télécharger mon CV <i className="fa-solid fa-download"></i>
           </button>
         </div>
         <div className="follow">
           <p>Suivez-moi</p>
           <div className="icons">
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-brands fa-linkedin"></i>
-            <i class="fa-brands fa-youtube"></i>
-            <i class="fa-solid fa-at"></i>
+            <i className="fa-brands fa-github"></i>
+            <i className="fa-brands fa-linkedin"></i>
+            <i className="fa-brands fa-youtube"></i>
+            <i className="fa-solid fa-at"></i>
           </div>
         </div>
       </div>
