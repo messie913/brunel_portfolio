@@ -1,0 +1,80 @@
+.contactContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 70px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 1rem;
+  .textContact {
+    display: flex;
+    .texte {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+      h2 {
+        font-size: 1rem;
+        color: $greenMenthe;
+      }
+      h3 {
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+      }
+      p {
+        line-height: 20px;
+        letter-spacing: 0.7px;
+      }
+    }
+    .icons {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: space-between;
+      .itemIcom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        i {
+          font-size: 1.5rem;
+          color: $greenMenthe;
+        }
+        .text {
+          font-size: 0.9em;
+        }
+      }
+    }
+  }
+  .formContainer {
+    form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 30px 50px auto;
+      grid-template-areas:
+        "name email "
+        "message message"
+        "envoyer envoyer";
+      gap: 1rem;
+      #name {
+        grid-area: name;
+      }
+      #email {
+        grid-area: email;
+      }
+      #message {
+        grid-area: message;
+      }
+      input,
+      textarea {
+        background-color: transparent;
+        border: 1px solid rgba(245, 245, 245, 0.765);
+        outline: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-family: "Inter";
+        color: white;
+      }
+    }
+  }
+}

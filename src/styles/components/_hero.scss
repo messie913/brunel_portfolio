@@ -22,7 +22,11 @@
       outline: none;
     }
     h1 {
-      font-size: 3.2rem;
+      font-size: 3rem;
+      text-transform: lowercase;
+      .firstWord {
+        text-transform: capitalize;
+      }
       .ctaText {
         color: $greenMenthe;
       }

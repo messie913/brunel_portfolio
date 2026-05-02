@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Header = () => {
   return (
@@ -14,30 +15,48 @@ const Header = () => {
         </NavLink>
       </figure>
       <ul className="menu">
-        <NavLink to="/" className="nav-active">
+        <HashLink
+          to="/#hero"
+          className={(nav) => (nav.isActive ? "nav-active" : "")}
+        >
           <li>Accueil</li>
-        </NavLink>
-        <NavLink>
+        </HashLink>
+        <NavLink
+          to="/about"
+          className={(nav) => (nav.isActive ? "nav-active" : "")}
+        >
           <li>À propos</li>
         </NavLink>
-        <NavLink>
-          <li>Compétences</li>
-        </NavLink>
-        <NavLink>
+
+        <HashLink
+          to="/#projects"
+          className={(nav) => (nav.isActive ? "nav-active" : "")}
+        >
           <li>Projets</li>
-        </NavLink>
-        <NavLink>
+        </HashLink>
+        <HashLink
+          to="/#walloffame"
+          className={(nav) => (nav.isActive ? "nav-active" : "")}
+        >
           <li>Ils parlent de moi</li>
-        </NavLink>
-        <NavLink>
+        </HashLink>
+        <HashLink
+          to="/#Youtube"
+          className={(nav) => (nav.isActive ? "nav-active" : "")}
+        >
           <li>
             Youtube{" "}
             <i className="fa-brands fa-youtube" style={{ color: "red" }}></i>
           </li>
-        </NavLink>
-        <NavLink>
+        </HashLink>
+
+        <HashLink
+          smooth
+          to="/#contact"
+          className={(nav) => (nav.isActive ? "nav-active" : "")}
+        >
           <li>Contact</li>
-        </NavLink>
+        </HashLink>
       </ul>
       <div className="btnContact">
         <NavLink>

@@ -2,11 +2,11 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="heroContainer">
+    <div className="heroContainer" id="hero">
       <div className="heroPres">
         <p className="webDev">Brunel Loumouamou - Dévéloppeur Full-Stack</p>
         <h1>
-          Je conçois des <br />
+          <span className="firstWord">Je</span> conçois des <br />
           <span className="ctaText"> applications web modernes</span> et
           performantes.
         </h1>
@@ -30,7 +30,7 @@ const Hero = () => {
             <i className="fa-brands fa-github"></i>
             <i className="fa-brands fa-linkedin"></i>
             <i className="fa-brands fa-youtube"></i>
-            <i className="fa-solid fa-at"></i>
+            <i class="fa-solid fa-envelope"></i>
           </div>
         </div>
       </div>

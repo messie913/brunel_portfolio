@@ -1,0 +1,189 @@
+.aboutMain {
+  max-width: 1400px;
+  padding: 0 70px;
+  margin: 0 auto;
+  h1 {
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .aboutContent {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 1rem;
+
+    .textAbout {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      gap: 0.5rem;
+      p {
+        letter-spacing: 1px;
+        line-height: 22px;
+      }
+    }
+    figure {
+      background: url(./../../assets/Images/background_welcome.JPG) center/cover;
+    }
+  }
+  .statsAboutMe {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    .statItem {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      i {
+        color: $greenMenthe;
+        font-size: 3rem;
+      }
+      .nbStat {
+        p:first-child {
+          color: $menthe;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+// New skills style
+.skillsNF {
+  max-width: 1400px;
+  padding: 0 70px;
+  margin: 0 auto;
+  // background: url(./../../assets/Images/back_skills.png) center/cover;
+  .skillsIntro {
+    max-width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    h2 {
+      font-size: 2rem;
+      letter-spacing: 2px;
+    }
+    p {
+      font-size: 1.1rem;
+      letter-spacing: 0.6px;
+    }
+  }
+  .skillsNFWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin: 1rem 0;
+    .technos {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid $blue;
+      background-color: #72c7ba08;
+
+      border-radius: 10px;
+      padding: 15px;
+      .textTechno {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-grow: 1;
+        figure {
+          border: 1px solid $blue;
+          padding: 5px;
+          border-radius: 50%;
+          width: 100px;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #5b6fa75c;
+          i {
+            font-size: 2rem;
+          }
+        }
+        .textContent {
+          display: flex;
+          flex-direction: column;
+          h3 {
+            letter-spacing: 1px;
+          }
+          p {
+            line-height: 22px;
+            letter-spacing: 0.6px;
+          }
+        }
+      }
+      .technoWrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        gap: 1rem;
+        margin-bottom: 0 auto;
+        width: 100%;
+        li {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          i {
+            font-size: 2rem;
+            color: $greenMenthe;
+          }
+        }
+      }
+    }
+  }
+}
+
+// End new skills style
+.skills {
+  max-width: 1400px;
+  padding: 0 70px;
+  margin: 0 auto;
+  .skillsContent {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 1em;
+    .technos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+
+      .technoContainer {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        gap: 1rem;
+        border: 1px dotted dodgerblue;
+        i {
+          font-size: 3rem;
+          flex-grow: 1;
+          height: 100%;
+        }
+      }
+      .technosItem {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        border: 1px solid sandybrown;
+        gap: 1rem;
+        li {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 0.5rem;
+        }
+      }
+    }
+  }
+}
