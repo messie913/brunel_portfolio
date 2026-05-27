@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   return (
@@ -7,12 +8,25 @@ const Projects = () => {
       <div className="allProject">
         <h3>Quelques projets récents</h3>
         <button className="cta neutrale">
-          Voir tous les projets <i class="fa-solid fa-arrow-right"></i>
+          <a
+            rel="noreferrer"
+            target="_blank"
+            className="btnCta"
+            href="https://regip.tech"
+          >
+            Voir tous les projets <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </button>
       </div>
       <div className="cardContainer">
         {/* Card 1 */}
-        <div className="card">
+        <div
+          className="card"
+          data-aos="fade-left"
+          data-aos-duration="2000"
+          data-aos-offset="200"
+          data-aos-delay="200"
+        >
           <div className="card-head moviestuff"></div>
           <div className="card-body">
             <h3>Moviestuff - webapp de cinéma.</h3>
@@ -34,7 +48,13 @@ const Projects = () => {
           </div>
         </div>
         {/* Card 2 */}
-        <div className="card">
+        <div
+          className="card"
+          data-aos="fade-up"
+          data-aos-duration="2050"
+          data-aos-offset="200"
+          data-aos-delay="210"
+        >
           <div className="card-head ariva"></div>
           <div className="card-body">
             <h3>Moviestuff - webapp de cinéma.</h3>
@@ -56,7 +76,13 @@ const Projects = () => {
           </div>
         </div>
         {/* Card 3 */}
-        <div className="card">
+        <div
+          className="card"
+          data-aos="fade-down"
+          data-aos-duration="2100"
+          data-aos-offset="200"
+          data-aos-delay="215"
+        >
           <div className="card-head marmitepartage"></div>
           <div className="card-body">
             <h3>Moviestuff - webapp de cinéma.</h3>
@@ -78,7 +104,13 @@ const Projects = () => {
           </div>
         </div>
         {/* Card 4 */}
-        <div className="card">
+        <div
+          className="card"
+          data-aos="fade-right"
+          data-aos-duration="2200"
+          data-aos-offset="200"
+          data-aos-delay="220"
+        >
           <div className="card-head movie"></div>
           <div className="card-body">
             <h3>Moviestuff - webapp de cinéma.</h3>

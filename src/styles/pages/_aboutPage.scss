@@ -2,6 +2,9 @@
   max-width: 1400px;
   padding: 0 70px;
   margin: 0 auto;
+  @media (width < 900px) {
+    padding: 0 5px;
+  }
   h1 {
     letter-spacing: 2px;
     text-align: center;
@@ -11,7 +14,10 @@
     display: grid;
     grid-template-columns: 60% 40%;
     gap: 1rem;
-
+    @media (width<680px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 400px;
+    }
     .textAbout {
       display: flex;
       flex-direction: column;
@@ -31,6 +37,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 1rem;
     .statItem {
       display: flex;
@@ -44,6 +51,14 @@
         p:first-child {
           color: $menthe;
           font-size: 1.5rem;
+          @media (width <680px) {
+            font-size: 1rem;
+          }
+        }
+        p {
+          @media (width <680px) {
+            font-size: 0.8rem;
+          }
         }
       }
     }
@@ -55,11 +70,17 @@
   max-width: 1400px;
   padding: 0 70px;
   margin: 0 auto;
+  @media (width < 900px) {
+    padding: 0 5px;
+  }
   // background: url(./../../assets/Images/back_skills.png) center/cover;
   .skillsIntro {
     max-width: 50%;
     margin: 0 auto;
     text-align: center;
+    @media (width <680px) {
+      max-width: 100%;
+    }
     h2 {
       font-size: 2rem;
       letter-spacing: 2px;
@@ -74,6 +95,9 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
     margin: 1rem 0;
+    @media (width < 900px) {
+      grid-template-columns: 1fr;
+    }
     .technos {
       display: flex;
       flex-direction: column;
@@ -82,7 +106,7 @@
       gap: 1rem;
       margin-bottom: 1rem;
       border: 1px solid $blue;
-      background-color: #72c7ba08;
+      background-color: #ebf4f208;
 
       border-radius: 10px;
       padding: 15px;
@@ -126,6 +150,9 @@
         gap: 1rem;
         margin-bottom: 0 auto;
         width: 100%;
+        @media (width <580px) {
+          flex-wrap: wrap;
+        }
         li {
           display: flex;
           flex-direction: column;

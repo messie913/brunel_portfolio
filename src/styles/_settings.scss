@@ -26,6 +26,7 @@ li {
 
 body {
   background-color: $blackEbony;
+  // background: url(./../assets/Images/back_skills.png) center/cover no-repeat;
   color: whitesmoke;
   font-family: "Inter", sans-serif;
 }
@@ -49,9 +50,27 @@ h2 {
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background-color: $menthe;
+    color: white;
+  }
+  @media (width <580px) {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
 }
 .neutrale {
   color: whitesmoke;
   background-color: transparent;
   border: 1px solid whitesmoke;
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    background-color: #16b84e;
+  }
+}
+.btnCta {
+  text-decoration: none;
+  color: white;
 }

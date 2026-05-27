@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 const Header = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const toogleMenu = () => {
+    if (isMobile) {
+      setIsMobile(false);
+    } else {
+      setIsMobile(true);
+    }
+  };
   return (
     <div className="mainHeader">
       <figure className="logo">
@@ -14,7 +22,12 @@ const Header = () => {
           />
         </NavLink>
       </figure>
-      <ul className="menu">
+      <ul
+        className="menu"
+        style={{
+          right: isMobile ? "0" : "100%",
+        }}
+      >
         <HashLink
           to="/#hero"
           className={(nav) => (nav.isActive ? "nav-active" : "")}
@@ -60,8 +73,19 @@ const Header = () => {
       </ul>
       <div className="btnContact">
         <NavLink>
-          <button>Me contacter</button>
+          <button>
+            <HashLink
+              smooth
+              to="/#contact"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              Me contacter
+            </HashLink>
+          </button>
         </NavLink>
+      </div>
+      <div className="iMobileMenu">
+        <i class="fa-solid fa-bars-staggered" onClick={() => toogleMenu()}></i>
       </div>
     </div>
   );

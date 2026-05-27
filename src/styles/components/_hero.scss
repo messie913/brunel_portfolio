@@ -4,8 +4,19 @@
   display: grid;
   grid-template-columns: 60% 40%;
   // grid-template-rows: 70vh;
-  grid-template-areas: "pres pres img";
+  grid-template-areas: "pres  img";
   padding: 10px 80px;
+  @media (width < 900px) {
+    padding: 10px 5px;
+  }
+  @media (width < 680px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 500px;
+    grid-template-areas:
+      "img"
+      "pres";
+  }
+
   .heroPres {
     min-height: 100%;
     display: flex;
@@ -24,6 +35,9 @@
     h1 {
       font-size: 3rem;
       text-transform: lowercase;
+      @media (width<680px) {
+        font-size: 2rem;
+      }
       .firstWord {
         text-transform: capitalize;
       }
@@ -39,6 +53,15 @@
     .ctaContainer {
       display: flex;
       gap: 1rem;
+      @media (width < 580px) {
+        flex-direction: column;
+      }
+      .cta {
+        @media (width<830px) {
+          font-size: 1rem;
+          letter-spacing: 0.5px;
+        }
+      }
     }
     .follow {
       display: flex;
@@ -64,5 +87,11 @@
     background: url(./../../assets/Images/bg_portfolio.png) center/cover
       no-repeat;
     border-radius: 10px;
+    @media (width<680px) {
+      background-position: center;
+      background-size: 80%;
+      margin-top: 10px;
+      border-radius: 20px;
+    }
   }
 }

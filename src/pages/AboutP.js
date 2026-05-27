@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "motion/react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Aos from "aos";
 
 const AboutP = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000, once: true });
+    Aos.refresh();
+  }, []);
   return (
     <div>
       <Header />
@@ -15,23 +20,35 @@ const AboutP = () => {
               Je suis développeur web full-stack, spécialisé dans la création
               d’applications modernes, performantes et orientées utilisateur.
             </p>
-            <p>
+            <p
+              data-aos="fade-right"
+              data-aos-duration="2000"
+              data-aos-delay="100"
+            >
               Titulaire d’une maîtrise en science informatique, j’ai développé
               une solide expertise aussi bien en front-end qu’en back-end, ce
               qui me permet de concevoir des solutions complètes, de l’interface
               utilisateur jusqu’à la logique serveur.
             </p>
-            <p>
+            <p
+              data-aos="fade-left"
+              data-aos-duration="2100"
+              data-aos-delay="120"
+            >
               Je travaille régulièrement avec des technologies telles que HTML,
               CSS, JavaScript, React, PHP et Node.js, ainsi que des outils
               modernes comme Tailwind CSS et Wix selon les besoins du projet.
             </p>
-            <p>
+            <p
+              data-aos="fade-right"
+              data-aos-duration="2150"
+              data-aos-delay="140"
+            >
               Passionné par la programmation web, j’aime transformer des idées
               en produits concrets, tout en mettant l’accent sur la qualité du
               code, l’expérience utilisateur et la performance.
             </p>
-            <p>
+            <p data-aos="fade-down-right" data-aos-duration="2200">
               En parallèle, je partage mes connaissances à travers ma chaîne
               YouTube <i style={{ color: "#72c7ba" }}>CodeDeComplexe</i>, où je
               vulgarise la programmation web afin de la rendre accessible à
@@ -49,7 +66,12 @@ const AboutP = () => {
           <figure></figure>
         </div>
         <div className="statsAboutMe">
-          <div className="statItem">
+          <div
+            className="statItem"
+            data-aos="fade-down-right"
+            data-aos-duration="1000"
+            data-aos-offset="200"
+          >
             <motion.i
               initial={{ rotate: 0 }}
               whileInView={{ rotate: 360 }}
@@ -62,21 +84,36 @@ const AboutP = () => {
               <p>Années d'expérience</p>
             </div>
           </div>
-          <div className="statItem">
+          <div
+            className="statItem"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-offset="200"
+          >
             <i className="fa-solid fa-diagram-project"></i>
             <div className="nbStat">
               <p>10+</p>
               <p>Projets réalisés</p>
             </div>
           </div>
-          <div className="statItem">
+          <div
+            className="statItem"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-offset="200"
+          >
             <i className="fa-brands fa-youtube"></i>
             <div className="nbStat">
               <p>10+</p>
               <p>Abonnées Youtube</p>
             </div>
           </div>
-          <div className="statItem">
+          <div
+            className="statItem"
+            data-aos="fade-down-left"
+            data-aos-duration="1000"
+            data-aos-offset="200"
+          >
             <i className="fa-brands fa-youtube"></i>
             <div className="nbStat">
               <p>10+</p>

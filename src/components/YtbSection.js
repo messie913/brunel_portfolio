@@ -7,14 +7,35 @@ const YtbSection = () => {
         <h2>
           <i class="fa-brands fa-youtube" style={{ color: "red" }}></i> YOUTUBE
         </h2>
-        <h3>Je partage la programmation web de façon simple et accessible.</h3>
+        <h3
+          data-aos="fade-left"
+          data-aos-duration="2000"
+          data-aos-offset="200"
+          data-aos-delay="200"
+        >
+          Je partage la programmation web de façon simple et accessible.
+        </h3>
         <p>
           Sur ma chaîne youtube CodeDécomplexé, je crée du contenu pour aider
           les débutants et les passionnés à mieux comprendre la programmation
           web.{" "}
         </p>
-        <button className="cta neutrale">
-          Visiter la chaîne YouTube <i className="fa-solid fa-arrow-right"></i>
+        <button
+          className="cta neutrale"
+          data-aos="zoom-in-down"
+          data-aos-duration="2000"
+          data-aos-offset="200"
+          data-aos-delay="200"
+        >
+          <a
+            rel="noreferrer"
+            href="https://www.youtube.com/@codedecomplexe"
+            target="_blank"
+            className="btnCta"
+          >
+            Visiter la chaîne YouTube{" "}
+            <i className="fa-solid fa-arrow-right"></i>
+          </a>
         </button>
       </div>
       <div className="video1">
@@ -27,9 +48,20 @@ const YtbSection = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
+          data-aos="zoom-out-right"
+          data-aos-duration="2000"
+          data-aos-offset="200"
+          data-aos-delay="200"
         ></iframe>
       </div>
-      <div className="video2">
+      <div
+        className="video2"
+        data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000"
+        data-aos-offset="200"
+        data-aos-delay="210"
+      >
         <iframe
           width="200"
           height="100"
@@ -51,6 +83,43 @@ const YtbSection = () => {
           allowfullscreen
         ></iframe>
       </div>
+
+      {/* <div className="mobileVideos">
+        <div className="video1">
+          <iframe
+            width="350"
+            height="260"
+            src="https://www.youtube.com/embed/7C2raG_eqjQ?si=q6hNqGCm-9Mm7HLC"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div className="video2">
+          <iframe
+            width="200"
+            height="100"
+            src="https://www.youtube.com/embed/QsAt5ZfikI0?si=ibcNOhzERByU2qja"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            width="200"
+            height="100"
+            src="https://www.youtube.com/embed/Rc7ZVTzzH5g?si=rhFMvlQO6OicD58M"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div> */}
     </div>
   );
 };

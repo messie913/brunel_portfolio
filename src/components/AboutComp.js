@@ -1,13 +1,20 @@
-import React from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const AboutComp = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000, once: true });
+    Aos.refresh();
+  }, []);
   return (
     <div className="aboutSection">
       <div className="aboutText">
         <div className="texte">
           <h2>À PROPOS DE MOI</h2>
           <h3>Passionné par le code, animé par la résolution de problèmes.</h3>
-          <p>
+          <p data-aos="fade-left" data-aos-duration="500" data-aos-offset="200">
             Titulaire d'une maîtrise en science informatique, je suis
             dévéloppeur web full-stack avec une solide expérience dans la
             conception et le dévéloppement d'applications modernes. J'utilise
@@ -22,25 +29,42 @@ const AboutComp = () => {
               fontSize: "1rem",
             }}
           >
-            En savoir plus sur moi
+            <Link to="/about" className="btnCta">
+              En savoir plus sur moi
+            </Link>
           </button>
         </div>
         <div className="stats">
-          <div className="statsItem">
+          <div
+            className="statsItem"
+            data-aos="fade-left"
+            data-aos-duration="500"
+            data-aos-offset="200"
+          >
             <i className="fa-solid fa-calendar"></i>
             <div className="nbStat">
               <p>3+</p>
               <p>Années d'expérience</p>
             </div>
           </div>
-          <div className="statsItem">
+          <div
+            className="statsItem"
+            data-aos="flip-down"
+            data-aos-duration="500"
+            data-aos-offset="200"
+          >
             <i className="fa-solid fa-diagram-project"></i>
             <div className="nbStat">
               <p>10+</p>
               <p>Projets réalisés</p>
             </div>
           </div>
-          <div className="statsItem">
+          <div
+            className="statsItem"
+            data-aos="fade-right"
+            data-aos-duration="500"
+            data-aos-offset="200"
+          >
             <i className="fa-brands fa-youtube"></i>
             <div className="nbStat">
               <p>10+</p>
@@ -52,7 +76,12 @@ const AboutComp = () => {
       <div className="skills">
         <h2>Compétences</h2>
         <p>Technologie avec lesquelles je travaille.</p>
-        <div className="technos">
+        <div
+          className="technos"
+          data-aos="fade-left"
+          data-aos-duration="1500"
+          data-aos-offset="200"
+        >
           <h3>Frontend</h3>
           <ul className="technosItem">
             <li>
@@ -73,12 +102,17 @@ const AboutComp = () => {
             </li>
             <li>
               <i class="fa-brands fa-bootstrap"></i>
-              <p>Bootsrap</p>
+              <p>Bootstrap</p>
             </li>
           </ul>
         </div>
         {/* Backend */}
-        <div className="technos">
+        <div
+          className="technos"
+          data-aos="fade-right"
+          data-aos-duration="2000"
+          data-aos-offset="200"
+        >
           <h3>Backend</h3>
           <ul className="technosItem">
             <li>
@@ -104,7 +138,12 @@ const AboutComp = () => {
           </ul>
         </div>
         {/* Utils */}
-        <div className="technos">
+        <div
+          className="technos"
+          data-aos="fade-left"
+          data-aos-duration="1500"
+          data-aos-offset="200"
+        >
           <h3>Outils & autres</h3>
           <ul className="technosItem">
             <li>
