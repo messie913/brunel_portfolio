@@ -11,7 +11,7 @@ const YtbSection = () => {
           data-aos="fade-left"
           data-aos-duration="2000"
           data-aos-offset="200"
-          data-aos-delay="200"
+          data-aos-delay="300"
         >
           Je partage la programmation web de façon simple et accessible.
         </h3>

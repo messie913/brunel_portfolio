@@ -9,7 +9,33 @@ const ContactComp = () => {
   });
   // SAve Form Data
   const handleChange = (e) => {
+    console.log(e.target.value);
+
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+  // Handle submit
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(formData);
+
+    console.log("Sending Form !");
+    try {
+      const response = await fetch("http://localhost:5000/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      const data = await response.json();
+      console.log(data);
+
+      alert("Email envoye avec succes");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.log(error);
+      alert("Erreur serveur");
+    }
   };
   return (
     <div className="contactContainer" id="contact">
@@ -19,7 +45,7 @@ const ContactComp = () => {
           data-aos="zoom-out-left"
           data-aos-easing="ease-out-cubic"
           data-aos-duration="2000"
-          data-aos-offset="400"
+          data-aos-offset="200"
         >
           <h2>Contact</h2>
           <h3>Travaillons ensemble</h3>
@@ -33,25 +59,25 @@ const ContactComp = () => {
           data-aos="fade-down"
           data-aos-easing="ease-out-cubic"
           data-aos-duration="2000"
-          data-aos-offset="400"
+          data-aos-offset="200"
           data-aos-delay="200"
         >
           <div className="itemIcom">
-            <i class="fa-solid fa-envelope"></i>
+            <i className="fa-solid fa-envelope"></i>
             <div className="text">
               <p>Email</p>
               <p>bloumoua@hotmail.com</p>
             </div>
           </div>
           <div className="itemIcom">
-            <i class="fa-solid fa-map-location"></i>
+            <i className="fa-solid fa-map-location"></i>
             <div className="text">
               <p>Localisation</p>
               <p>Montréal, Canada</p>
             </div>
           </div>
           <div className="itemIcom">
-            <i class="fa-solid fa-business-time"></i>
+            <i className="fa-solid fa-business-time"></i>
             <div className="text">
               <p>Disponibilité</p>
               <p>Ouvert aux opportunités</p>
@@ -63,14 +89,15 @@ const ContactComp = () => {
         className="formContainer"
         data-aos="fade-right"
         data-aos-duration="2500"
-        data-aos-offset="400"
+        data-aos-offset="200"
         data-aos-delay="210"
       >
-        <form action="" method="post">
+        <form onSubmit={handleSubmit}>
           <input
             type="text"
             name="name"
             id="name"
+            value={formData.name}
             placeholder="Votre nom ..."
             onChange={handleChange}
           />
@@ -78,12 +105,14 @@ const ContactComp = () => {
             type="email"
             name="email"
             id="email"
+            value={formData.email}
             placeholder="Votre email ..."
             onChange={handleChange}
           />
           <textarea
             name="message"
             id="message"
+            value={formData.message}
             placeholder="Votre message ..."
             onChange={handleChange}
           ></textarea>
