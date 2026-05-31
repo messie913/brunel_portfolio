@@ -18,7 +18,7 @@ const YtbSection = () => {
         <p>
           Sur ma chaîne youtube CodeDécomplexé, je crée du contenu pour aider
           les débutants et les passionnés à mieux comprendre la programmation
-          web.{" "}
+          web.
         </p>
         <button
           className="cta neutrale"
