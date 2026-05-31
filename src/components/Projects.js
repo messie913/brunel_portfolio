@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const Projects = () => {
   return (
@@ -43,7 +42,7 @@ const Projects = () => {
             </div>
           </div>
           <div className="card-footer">
-            <a href="">Voir le projet</a>
+            <a href="https://moviestuff-app.vercel.app/">Voir le projet</a>
             <i class="fa-solid fa-arrow-right"></i>
           </div>
         </div>
@@ -71,7 +70,7 @@ const Projects = () => {
             </div>
           </div>
           <div className="card-footer">
-            <a href="">Voir le projet</a>
+            <a href="https://moviestuff-app.vercel.app/">Voir le projet</a>
             <i class="fa-solid fa-arrow-right"></i>
           </div>
         </div>
@@ -99,7 +98,7 @@ const Projects = () => {
             </div>
           </div>
           <div className="card-footer">
-            <a href="">Voir le projet</a>
+            <a href="https://moviestuff-app.vercel.app/">Voir le projet</a>
             <i class="fa-solid fa-arrow-right"></i>
           </div>
         </div>
@@ -127,7 +126,7 @@ const Projects = () => {
             </div>
           </div>
           <div className="card-footer">
-            <a href="">Voir le projet</a>
+            <a href="https://moviestuff-app.vercel.app/">Voir le projet</a>
             <i class="fa-solid fa-arrow-right"></i>
           </div>
         </div>
