@@ -120,6 +120,7 @@ const Projects = () => {
             </p>
             <div className="technosUsed">
               <span className="techno">React</span>
+              <span className="techno">Taiwind CSS</span>
               <span className="techno">SASS</span>
               <span className="techno">Axios</span>
               <span className="techno">Bootstrap</span>
